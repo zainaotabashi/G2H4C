@@ -45,10 +45,25 @@ nav ul li a {
 }
 
 .hero {
-    background: #f4f4f4;
+    position: relative;
     padding: 100px 25px;
     text-align: center;
+    color: white;
 }
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5); /* tinted overlay */
+    z-index: 0;
+}
+
+.hero * {
+    position: relative;
+    z-index: 1;
+}
+
 
 .cta {
     background: #0077ff;
