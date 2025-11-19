@@ -28,16 +28,15 @@ body {
 
 /* CURVED TEXT */
 .curved-text {
-    width: 420px;
-    margin: 10px auto 0;
+    width: 380px;
+    margin: -35px auto 20px; /* pulls text upward under the circle */
 }
 
 .curved-text text {
-    font-size: 26px;
+    font-size: 20px;
     font-weight: bold;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
     fill: #333;
-    text-transform: uppercase;
 }
 
 /* NAVIGATION */
@@ -115,3 +114,30 @@ footer {
     text-align: center;
     padding: 30px 20px;
 }
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: transparent; /* no gray banner */
+}
+
+.hero-title {
+    font-size: 28px;
+    font-weight: 600;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+    color: #333;
+}
+
+.cta {
+    background: #0077ff;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
