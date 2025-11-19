@@ -54,8 +54,11 @@ nav ul li a {
     border-radius: 10px;
     margin-bottom: 20px;
 }
-
-
+.top-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 .cta {
     background: #0077ff;
