@@ -29,7 +29,7 @@ body {
 /* CURVED TEXT */
 .curved-text {
     width: 380px;
-    margin: -35px auto 20px; /* pulls text upward under the circle */
+    margin: -60px auto 10px; /* pulls text upward under the circle */
 }
 
 .curved-text text {
