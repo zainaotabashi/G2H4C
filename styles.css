@@ -1,15 +1,68 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BODY */
 body {
     background: white;
     font-family: Arial, sans-serif;
 }
 
-/* CIRCLE LOGO + CURVED TEXT */
+/* ------------------------------
+   NAVIGATION (OPTION A LAYOUT)
+--------------------------------*/
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #222;
+    padding: 15px 25px;
+}
+
+.logo {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* Nav Links */
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a.active {
+    text-decoration: underline;
+}
+
+/* Donate Button */
+.donate-btn {
+    background: #ff6600;
+    padding: 8px 18px;
+    border-radius: 6px;
+    color: white !important;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.donate-btn.active {
+    background: #ff4500;
+}
+
+/* ------------------------------
+   CIRCLE LOGO + CURVED TEXT
+--------------------------------*/
 .circle-logo-container {
     text-align: center;
     margin-top: 20px;
@@ -25,81 +78,73 @@ body {
     border: 6px solid #ff6600;
 }
 
+/* Curved Text */
 .curved-text {
     width: 380px;
-    margin: -150px auto 20px; /* pull text up under the circle */
+    margin: -220px auto 20px; /* PULL TEXT WAY UP */
+    display: block;
 }
 
 .curved-text text {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: bold;
     letter-spacing: 2px;
     fill: #333;
 }
 
-/* NAVIGATION */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #222;
-    padding: 15px 25px;
-}
 
-nav .logo {
-    color: white;
-    font-size: 24px;
-}
-
-nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-}
-
-.donate-btn {
-    background: #ff6600;
-    padding: 6px 12px;
-    border-radius: 5px;
-    color: white;
-    text-decoration: none;
-}
-
-/* HERO SECTION */
+/* ------------------------------
+   HERO SECTION
+--------------------------------*/
 .hero {
     text-align: center;
-    padding: 60px 25px;
+    padding: 60px 20px;
     background: white;
 }
 
-.hero h2 {
+.hero-title {
     font-size: 28px;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 20px auto;
     color: #333;
 }
 
 .cta {
     background: #0077ff;
-    color: #fff;
+    color: white;
     padding: 12px 24px;
-    border-radius: 5px;
+    border-radius: 8px;
     display: inline-block;
     text-decoration: none;
-    margin-top: 20px;
+    font-size: 18px;
     font-weight: bold;
+    margin-top: 10px;
 }
 
-/* CONTENT SECTIONS */
+/* ------------------------------
+   CONTENT SECTIONS (HOME, ABOUT, WORK)
+--------------------------------*/
 .section {
-    padding: 40px 25px;
+    padding: 50px 25px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
 
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* ------------------------------
+   PROGRAM LIST (HOME PAGE)
+--------------------------------*/
 .program-list {
     display: flex;
     gap: 20px;
@@ -113,14 +158,13 @@ nav ul li a {
     border-radius: 6px;
 }
 
-/* FOOTER */
-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
+.program h3 {
+    margin-bottom: 10px;
 }
 
+/* ------------------------------
+   VOLUNTEER FORM (IF USED LATER)
+--------------------------------*/
 #volunteerForm {
     margin-top: 20px;
     display: flex;
@@ -130,4 +174,61 @@ footer {
 
 .hidden {
     display: none;
+}
+
+/* ------------------------------
+   FOOTER
+--------------------------------*/
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+/* ------------------------------
+   MOBILE RESPONSIVENESS
+--------------------------------*/
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .circle-logo {
+        width: 300px;
+        height: 300px;
+    }
+
+    .curved-text {
+        width: 300px;
+        margin: -120px auto 20px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+}
+/* For New Mission Format */
+.mission-section {
+    text-align: center;
+    padding: 60px 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.mission-section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.mission-section p {
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 750px;
+    margin: 0 auto;
+    color: #555;
 }
